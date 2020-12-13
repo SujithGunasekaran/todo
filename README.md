@@ -34,14 +34,17 @@
  
  # Installation Setup 
  
- 1. 
+ 1. `Click clone button, There you will find HTTP link, Copy the HTTP link`
+ 2. `In your local system open git Bash`
+ 3. `Comman -> git clone "hTTP url" which you have copied`
+ 4. `Final step run "npm install" in both server and client
  
  
  # build with 🔥
  
-  1. `React Js`
-  2. `node Js`
-  3. `Express Js`
+  1. `React`
+  2. `node`
+  3. `Express`
   4. `mongodb`
 
 
