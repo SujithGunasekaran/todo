@@ -13,10 +13,12 @@
   Please run the below command in both server and client folder to download packages
  
   ### `npm install`
+  
+  -> Please add your mongodb URI in .env file in server
  
 # Information
 
- # To Start Client and Sever, Please enter below command in server
+ -> To Start Client and Sever, Please enter below command in server
  
  ### `npm run con`
  
@@ -28,10 +30,14 @@
  
  -> In client folder run below command
  
- ### `npm start`
+ ### `npm start` 
  
-# Important 
  
- -> Please add your mongodb URI in .env file in server
+ # Todo Website build using 🔥
+ 
+  -> React Js
+  -> node Js
+  -> Express Js
+  -> mongodb
 
 
