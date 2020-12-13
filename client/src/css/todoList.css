@@ -1,0 +1,101 @@
+.todo-main
+{
+    /* background-color:rgb(39, 38, 38); */
+    background-color: #0d1117;
+    /* padding : 20px 0px; */
+    margin: 30px 0px;
+    width : 100%;
+    margin-bottom: 50px;
+}
+@media(max-width:440px){
+    .todo-main-bottom{
+        margin-bottom: 45px;
+    }
+}
+.todo-main-item-container
+{
+    width: 100%;
+    margin-top : 30px;
+    /* background-color: rgb(58, 57, 57); */
+    background-color: #262a30;
+    border-left: 5px solid #61dafb;
+    display : flex;
+    border-radius: 10px;
+    transition: 0.4s all ease-in-out;
+    box-shadow: 0 3px 10px rgba(13, 13, 14, 0.16), 0 3px 10px rgba(12, 12, 12, 0.23);
+}
+.todo-main-item-container:hover
+{
+    box-shadow: 0 3px 20px rgba(13, 13, 14, 0.16), 0 3px 20px rgba(12, 12, 12, 0.23);
+}
+.todo-main-item-info
+{
+    padding : 20px 0px;
+    padding-left: 15px;
+    padding-right: 13px;
+    font-size: 15px;
+    color : white;
+    letter-spacing: 0.6px;
+    line-height: 180%;
+    word-spacing: 1.3px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s all ease-in-out;
+}
+.todo-main-item-icon
+{
+    display: flex;
+    margin-left: auto;
+    margin-top: 20px;
+}
+.todo-main-item-buttons
+{
+    margin-right: 10px;
+    /* margin-left: -103px; */
+    width: 20px;
+    font-size: 20px;
+    color : rgb(156, 153, 153);
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+    -webkit-appearance: none;
+    transition: 0.5s all ease-in-out !important;
+}
+.todo-main-item-buttons:hover
+{
+    cursor: pointer;
+    color : #61dafb;
+}
+.todo-main-edit-item-container
+{
+    margin : 40px 0px;
+    width : 100%;
+    display: flex;
+}
+
+/* edit input field update button */
+
+.todo-main-edit-input-button
+{
+    margin-top: 9px;
+    margin-left: -58px;
+    height: 25px;
+    /* padding-top: 9px; */
+    background-color: #0d1117;
+    width: 60px;
+    color : #61dafb;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    -webkit-appearance: none;
+    transition: 0.5s all ease-in-out;
+}
+.todo-main-edit-input-button:hover
+{
+    color : #61dafb;
+    cursor: pointer;
+}
+.todo-main-edit-input-button:focus
+{
+    outline: none;
+}

@@ -1,0 +1,30 @@
+.about-main
+{
+    background-color: #0d1117;
+    width: 100%;
+    position: absolute;
+    height : 100%;
+    margin-top: 148px;
+}
+
+.about-main-info
+{
+    padding : 20px 0px;
+    color : white;
+    font-size: 15px;
+    line-height: 190%;
+    letter-spacing: 0.6px;
+    word-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+.about-link-href
+{
+    color : #61dafb;
+    transition: 0.4s all ease-in-out;
+}
+.about-link-href:hover
+{
+    text-decoration: none;
+    cursor: pointer;
+    color : rgb(51, 51, 233);
+}
