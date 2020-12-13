@@ -35,9 +35,9 @@
  
  # Todo Website build using 🔥
  
-  -> React Js
-  -> node Js
-  -> Express Js
-  -> mongodb
+  ### `React Js`
+  ### `node Js`
+  ### `Express Js`
+  ### `mongodb`
 
 
