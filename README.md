@@ -30,7 +30,7 @@
  
  ### `npm start`
  
- ### Important 
+# Important 
  
  -> Please add your mongodb URI in .env file in server
 
