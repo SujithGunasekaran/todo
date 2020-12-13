@@ -39,9 +39,9 @@
  
  # build with 🔥
  
-  1. ### `React Js`
-  2. ### `node Js`
-  3 .### `Express Js`
-  4 .### `mongodb`
+  1. `React Js`
+  2. `node Js`
+  3. `Express Js`
+  4. `mongodb`
 
 
