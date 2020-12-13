@@ -32,12 +32,16 @@
  
  ### `npm start` 
  
+ # Installation Setup 
  
- # Todo Website build using 🔥
+ 1. 
  
-  ### `React Js`
-  ### `node Js`
-  ### `Express Js`
-  ### `mongodb`
+ 
+ # build with 🔥
+ 
+  1. ### `React Js`
+  2. ### `node Js`
+  3 .### `Express Js`
+  4 .### `mongodb`
 
 
