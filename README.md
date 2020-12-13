@@ -6,7 +6,14 @@
 # Todo
 
   Task Manager website
+  
+  
+# Installation Setup 
  
+ 1. `Click clone button, There you will find HTTP link, Copy the HTTP link`
+ 2. `In your local system open git Bash`
+ 3. `Comman -> git clone "hTTP url" which you have copied`
+ 4. `Final step run "npm install" in both server and client`
 
 # Important
  
@@ -31,13 +38,6 @@
  -> In client folder run below command
  
  ### `npm start` 
- 
- # Installation Setup 
- 
- 1. `Click clone button, There you will find HTTP link, Copy the HTTP link`
- 2. `In your local system open git Bash`
- 3. `Comman -> git clone "hTTP url" which you have copied`
- 4. `Final step run "npm install" in both server and client
  
  
  # build with 🔥
