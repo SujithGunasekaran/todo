@@ -34,25 +34,34 @@ function HomeFunction(){
 
         if(loggedIn === true){
             setLoadingBar(true)
-            let username = localStorage.getItem('username');
-            const getUserTodo =  { username : username }
-            axios.post(`${url}/userTodoList/get/TodoList`,getUserTodo)
-            .then((responseData) =>{
-                if(responseData.status === 200){
-                    let userTaskList = responseData.data;
-                    setUserTodoList(userTaskList)
-                    setLoadingBar(false)
-                }
-            })
-            .catch(()=>{
-                console.log("Error")
-                setLoadingBar(false)
-            })
-
+            getUseTodoList()
         }
  
     },[loggedIn])
-
+    
+    const getUseTodoList = async () =>{
+        let username = localStorage.getItem('username');
+        const getUserTodo =  { username : username }
+        await axios.post(`${url}/userTodoList/get/TodoList`,getUserTodo)
+        .then((responseData) =>{
+            if(responseData.status === 200){
+                let userTaskList = responseData.data;
+                if( editOpenClose && editRowId !== ''){
+                    setEditOpenClose(false)
+                    setEditRowId('')
+                }
+                if( addItem !== '' ){
+                    setAddItem('')
+                }
+                setUserTodoList(userTaskList)
+                setLoadingBar(false)
+            }
+        })
+        .catch(()=>{
+            console.log("Error")
+            setLoadingBar(false)
+        })
+    }
     
 
     const handleEditItem = (id,listinfo) => {
@@ -72,24 +81,9 @@ function HomeFunction(){
         const listinfo = updateItemInfo;
         const updateUserInfo = { username : username, id : id, info : listinfo, completed : completed }
         axios.post(`${url}/userTodoList/update/UserTodoList`,updateUserInfo)
-        .then(async (responseData) => {
+        .then((responseData) => {
             if(responseData.status === 200){
-                let username = localStorage.getItem('username');
-                const getUserTodo =  { username : username }
-                await axios.post(`${url}/userTodoList/get/TodoList`,getUserTodo)
-                .then((responseData) => {
-                    if(responseData.status === 200){
-                        setEditOpenClose(false);
-                        setEditRowId('');
-                        let userTaskList = responseData.data;
-                        setUserTodoList(userTaskList)
-                        setLoadingBar(false)
-                    }
-                })
-                .catch(()=>{
-                    console.log("Error")
-                    setLoadingBar(false)
-                })
+                getUseTodoList()
             }   
         })
         .catch(()=>{
@@ -111,23 +105,9 @@ function HomeFunction(){
         const completed = false;
         const newUserToDoList = { username : username, id : id, info : info, completed : completed }
         axios.post(`${url}/userTodoList/add/UserTodoList`,newUserToDoList)
-        .then( async (responseData)=>{
+        .then((responseData)=>{
             if(responseData.status === 200){
-                let username = localStorage.getItem('username');
-                const getUserTodo =  { username : username }
-                await axios.post(`${url}/userTodoList/get/TodoList`,getUserTodo)
-                .then((responseData)=>{
-                    if(responseData.status === 200){
-                        setAddItem('');
-                        let userTaskList = responseData.data;
-                        setUserTodoList(userTaskList)
-                        setLoadingBar(false)
-                    }
-                })
-                .catch(()=>{
-                    console.log("error")
-                    setLoadingBar(false)
-                })
+                getUseTodoList()
             }
         })
         .catch(()=>{
@@ -141,22 +121,9 @@ function HomeFunction(){
         const username = localStorage.getItem('username')
         const updateUserTodoList = { username : username, id : id, info : listinfo, completed : !completed }
         axios.post(`${url}/userTodoList/update/UserTodoList`,updateUserTodoList)
-        .then(async (responseData) => {
+        .then((responseData) => {
             if(responseData.status === 200){
-                let username = localStorage.getItem('username');
-                const getUserTodo =  { username : username }
-                await axios.post(`${url}/userTodoList/get/TodoList`,getUserTodo)
-                .then((responseData)=>{
-                    if(responseData.status === 200){
-                        let userTaskList = responseData.data;
-                        setUserTodoList(userTaskList)
-                        setLoadingBar(false)
-                    }
-                })
-                .catch(()=>{
-                    console.log("error")
-                    setLoadingBar(false)
-                })
+                getUseTodoList()
             }
         })
         .catch(()=>{
@@ -171,22 +138,9 @@ function HomeFunction(){
         const username = localStorage.getItem('username')
         const deleteUserTodoList = { username : username, id : id }
         axios.post(`${url}/userTodoList/delete/UserTodoList`,deleteUserTodoList)
-        .then(async(responseData)=>{
+        .then((responseData)=>{
             if(responseData.status === 200){
-                let username = localStorage.getItem('username');
-                const getUserTodo =  { username : username }
-                await axios.post(`${url}/userTodoList/get/TodoList`,getUserTodo)
-                .then((responseData)=>{
-                    if(responseData.status === 200){
-                        let userTaskList = responseData.data;
-                        setUserTodoList(userTaskList);
-                        setLoadingBar(false)
-                    }
-                })
-                .catch(()=>{
-                    console.log("Error")
-                    setLoadingBar(false)
-                })
+                getUseTodoList()
             }
         })
         .catch(()=>{
