@@ -1,8 +1,6 @@
 # Todo
 
-  Task Manager website
-  
-  Checkout 👇
+  Task Manager website 👇
   
   https://mytaskmanagers.herokuapp.com
   
