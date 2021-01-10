@@ -38,10 +38,11 @@
  
  
  # build with 🔥
- 
-  1. `React`
-  2. `node`
-  3. `Express`
-  4. `mongodb`
+  
+  1. `Javascript`
+  2. `React`
+  3. `node`
+  4. `Express`
+  5. `mongodb`
 
 
