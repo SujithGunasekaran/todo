@@ -1,9 +1,6 @@
 # Todo
 
-  Task Manager website 👇
-  
-  https://mytaskmanagers.herokuapp.com
-  
+  Task Manager website
   
 # Installation Setup 
  
