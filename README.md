@@ -1,6 +1,6 @@
-# Todo
+# Plan Your Day
 
-  Task Manager website
+  Simple To-do Website, To track my daily activities
   
 # Important
  
