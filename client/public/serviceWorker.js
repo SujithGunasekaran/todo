@@ -1,10 +1,9 @@
 const CACHE_NAME = "todo_version1";
-const urlToCache = ['index.html', 'offline.html'];
+const urlToCache = ['index.html'];
 
-const self = this;
 
 // Install SW
-self.addEventListener('install', (event) => {
+this.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then((cache) => {
@@ -14,32 +13,17 @@ self.addEventListener('install', (event) => {
 });
 
 // Listen for requests
-self.addEventListener('fetch', (event) => {
+this.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request)
             .then(async () => {
+                console.log(event.request);
                 try {
                     return fetch(event.request);
-                } catch (e) {
-                    return await caches.match('offline.html');
+                } catch (err) {
+                    console.log("err", err);
                 }
             })
-    )
+    );
 });
 
-// Activate the SW
-self.addEventListener('activate', (event) => {
-    const cacheWhitelist = [];
-    cacheWhitelist.push(CACHE_NAME);
-
-    event.waitUntil(
-        caches.keys().then((cacheNames) => Promise.all(
-            cacheNames.forEach((cacheName) => {
-                if (!cacheWhitelist.includes(cacheName)) {
-                    return caches.delete(cacheName);
-                }
-            })
-        ))
-
-    )
-});
